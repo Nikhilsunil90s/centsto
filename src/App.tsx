@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './images/centerstone_logo.svg';
 import './App.css';
+
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" width='200px' />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -19,6 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Footer/>
     </div>
   );
 }
