@@ -27,7 +27,7 @@ export default function Footer() {
                         </Box>
                     </Box>
                     <Box sx={{ width: { xs: 'fit-content', md: 'fit-content', lg: '100%' }, margin: 'auto', display: 'flex', justifyContent: 'left' }}>
-                        <Box sx={{ display: 'flex', gap: '2rem', py: '1rem', color: '#ffffff' }}>
+                        <Box sx={{ display: 'flex', py: '1rem', color: '#ffffff' }}>
                             <a href="https://www.facebook.com/centerstone">
                                 <Button variant="text" sx={{color: '#ffffff'}}>
                                     <img src={facebook_logo} width="40px"/>
