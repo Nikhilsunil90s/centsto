@@ -45,6 +45,7 @@ export default function Footer() {
                     <Box sx={{width: { xs: 'fit-content', md: 'fit-content', lg: '100%'}, margin: 'auto', display: 'flex', justifyContent: 'right'}}>
                         <Button variant='contained'
                             sx={{ textTransform: 'none', color: '#000000', fontWeight: 'bold', background: '#f0b357' }}
+                            style={{background: '#f0b357'}}
                             size='large'
                         >Contact Us
                         </Button>
