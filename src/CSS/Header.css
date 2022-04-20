@@ -7,7 +7,8 @@
 }
 .Bg-color{
     background-color: #ffff !important;
-}
+    position: fixed !important;
+  }
 .Bg-color img{
     width: 11%;
     margin-left: 50px;
@@ -18,8 +19,9 @@
   color: #2b2c30 !important;
   padding: 10px 20px !important;
   font-weight: 500 !important;
-  font-size: 18px !important;
-  line-height: 140% !important;
+  font-size: 16px !important;
+  line-height: 25px !important;
+  text-transform: unset !important;
 }
 .list-items{
     display: flex;

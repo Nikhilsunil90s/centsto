@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../CSS/Header.css"
 const Header=()=>{
-    const pages = ['Home', 'About Us', 'Landing Solutions'];
+    const pages = ['Home', 'About us', 'Landing Solutions'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -85,8 +85,8 @@ const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
           </Typography>
           <Box className="list-items">
             {pages?.map((page) => 
-                // {/* // {page=="Landing Solutions" ? <Button>Landing Solutions <FontAwesomeIcon icon="fa-thin fa-angle-down" /> </Button> */}
-                // {/* // : */}
+              //   page=="Landing Solutions" ? <Button>Landing Solutions </Button>
+              //  : 
                 (
              <>  <Button
                className="header-btn"

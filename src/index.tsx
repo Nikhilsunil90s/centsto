@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Applynow from './Applynow';
 import Header from './Header/Header';
 import './index.css';
 import LandingPage from './LandingPage';
 import App from './LandingPage';
 import reportWebVitals from './reportWebVitals';
+import SBALoan from './SBALoan';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <LandingPage />
+    <Header />
+    <SBALoan />
+    
   </React.StrictMode>
 );
 
