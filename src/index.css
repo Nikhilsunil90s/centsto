@@ -13,7 +13,9 @@ footer a{
   font-family: inherit !important;
   color: inherit !important;
 }
-
+button{
+  font-family: 'Montserrat' !important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
