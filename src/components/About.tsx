@@ -7,6 +7,7 @@ import about_member_bg from "../images/about_member_bg.jpg";
 import centerstone_logo_black from "../images/centerstone_logo_black.svg";
 import cafe_image from "../images/cafe.jpg";
 import building_image from "../images/building.jpg";
+import "../css/about.css";
 
 export default function About() {
     return (
@@ -34,7 +35,7 @@ export default function About() {
             </Box>
             <Box component="section" sx={{ background: '#f0bb4f14', display: 'grid', placeItems: 'center', m: 0 }}>
                 <Container sx={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', alignItems: 'center' }}>
-                    <Box sx={{ width: { xs: '90%', sm: '50%', md: '40%', lg: "40%", xl: "30%" }, py: '2rem' }}>
+                    <Box sx={{ width: { xs: '0%', sm: '50%', md: '40%', lg: "40%", xl: "30%" }, py: '2rem' }}>
                         <img src={logo_whiteBg} alt="Centerstone Logo" width='100%' />
                     </Box>
                     <Box sx={{ width: { xs: '90%', sm: '70%', md: '50%', lg: '50%', xl: "45%" }, py: "2rem" }}>
@@ -51,7 +52,7 @@ export default function About() {
                 </Container>
             </Box>
             <Box component="section" sx={{ background: `3ffffff`, py: '5rem' }}>
-                <Box sx={{ background: `url(${about_member_bg})`, backgroundRepeat: 'no-repeat' }}>
+                <Box className='no-bg-small' sx={{ background: `url(${about_member_bg})`, backgroundRepeat: 'no-repeat' }}>
                     <Typography variant="h4" sx={{ fontFamily: 'inherit', fontWeight: 800 }}>
                         Centerstone Executive Team
                     </Typography>
@@ -68,7 +69,7 @@ export default function About() {
                 </Box>
             </Box>
             <Box sx={{ position: 'relative' }}>
-                <Box sx={{ width: 'fit-content', right: 0, position: 'absolute' }} >
+                <Box className='no-small' sx={{ width: 'fit-content', right: 0, position: 'absolute' }} >
                     <svg width="7vh" height="14vh" viewBox="0 0 69 138" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="69" cy="69" r="69" fill="black" />
                     </svg>

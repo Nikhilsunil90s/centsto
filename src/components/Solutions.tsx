@@ -14,15 +14,15 @@ export default function Solutions() {
         setValue(newValue);
     }
     return (
-        <Box component="main" sx={{ textAlign: 'center'}}>
-            <Box component="section" sx={{ py: '3rem' }}>
+        <Box component="main" sx={{ textAlign: 'center', maxWidth: '100vw', overflowX: 'hidden'}}>
+            <Container component="section" sx={{ py: '3rem' }}>
                 <Typography variant='h4' sx={{ fontWeight: 800, fontFamily: 'inherit'}}>
                     Lending Solutions
                 </Typography>
-            </Box>
+            </Container>
             <Box sx={{ width: {xs : '100%', sm: '90%', md: '70%', lg: '60%', xl: '45%'}, margin: 'auto'}}>
                 <Box sx={{ background: '#F2E7D7', borderRadius: '25px', py: '4px' }}>
-                    <Tabs value={value} variant="scrollable" onChange={handleTabChange} aria-label="basic tabs example">
+                    <Tabs className="tabs-bar" value={value} variant="scrollable" scrollButtons="auto" onChange={handleTabChange} aria-label="basic tabs example" sx={{maxWidth: '100%'}}>
                         <Tab label="Business Financing" sx={{textTransform: 'none', color: '#555555', width: {xs: 'fit-content', md: '33%'}}} {...a11yProps(0)} />
                         <Tab label="Real State Financing" sx={{textTransform: 'none', color: '#555555', width: {xs: 'fit-content', md: '33%'}}} {...a11yProps(1)} />
                         <Tab label="Debt Financing" sx={{textTransform: 'none', color: '#555555', width: {xs: 'fit-content', md: '33%'}}} {...a11yProps(2)} />

@@ -9,3 +9,10 @@
 .MuiTabs-indicatorSpan{
     background-color: transparent;
 }
+
+@media (max-width: 576px) {
+    .tabs-bar{
+        max-width: 90%;
+        overflow-x: scroll;
+    }
+}

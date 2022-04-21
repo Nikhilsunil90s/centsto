@@ -1,0 +1,8 @@
+@media (max-width: 576px) {
+    .no-bg-small{
+        background: #ffffff !important;
+    }
+    .no-small{
+        display: none;
+    }
+}
