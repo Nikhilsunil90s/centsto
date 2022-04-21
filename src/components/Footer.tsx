@@ -1,13 +1,14 @@
 import React from 'react'
-import { Typography, Box, Button, Container, IconProps } from '@mui/material';
+import { Typography, Box, Button, Container } from '@mui/material';
 import logo from "../images/centerstone_logo.svg";
 import facebook_logo from "../images/facebook_logo.svg";
 import instagram_logo from "../images/instagram_logo.svg";
-import { Facebook, Instagram, Call, Mail } from '@mui/icons-material';
+import { Call, Mail } from '@mui/icons-material';
+import "../css/footer.css";
 
 export default function Footer() {
     return (
-        <Box component='footer' sx={{ py: '3rem', background: '#0E0E0E'}}>
+        <Box component='footer' sx={{ py: '3rem', background: '#0E0E0E', textAlign: 'center'}}>
             <Container sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
                 <Box sx={{ width: { xs: '100%', md: '60%', lg: '50%', py: '1rem', margin: 'auto' } }}>
                     <Box sx={{width: {xs: '100%', md: '100%', lg: '210px'}}}>

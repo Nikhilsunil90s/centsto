@@ -1,16 +1,15 @@
 import React from 'react';
-import logo from './images/centerstone_logo.svg';
-import './App.css';
-
 import Footer from './components/Footer';
 import About from './components/About';
 import Solutions from './components/Solutions';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <div className="App">
-      {/* <About/> */}
+      <About/>
       <Solutions/>
+      <Contact/>
       <Footer/>
     </div>
   );

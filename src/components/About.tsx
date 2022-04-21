@@ -10,7 +10,7 @@ import building_image from "../images/building.jpg";
 
 export default function About() {
     return (
-        <Box component="main">
+        <Box component="main" sx={{textAlign: 'center'}}>
             <Box component='section' sx={{ background: `url(${about_hero_bg})`, height: '100vh', display: 'grid', placeItems: 'center', m: 0 }}>
                 <Container sx={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', alignItems: 'center' }}>
                     <Box sx={{ py: '1rem', width: { xs: '100%', md: '70%', lg: '50%' }, pb: '3rem' }}>
@@ -50,7 +50,7 @@ export default function About() {
                     </Box>
                 </Container>
             </Box>
-            <Box component="section" sx={{ background: `3ffffff`, py: '8rem' }}>
+            <Box component="section" sx={{ background: `3ffffff`, py: '5rem' }}>
                 <Box sx={{ background: `url(${about_member_bg})`, backgroundRepeat: 'no-repeat' }}>
                     <Typography variant="h4" sx={{ fontFamily: 'inherit', fontWeight: 800 }}>
                         Centerstone Executive Team
@@ -69,13 +69,13 @@ export default function About() {
             </Box>
             <Box sx={{ position: 'relative' }}>
                 <Box sx={{ width: 'fit-content', right: 0, position: 'absolute' }} >
-                    <svg width="69" height="138" viewBox="0 0 69 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="7vh" height="14vh" viewBox="0 0 69 138" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="69" cy="69" r="69" fill="black" />
                     </svg>
                 </Box>
                 <Box sx={{ py: '2rem' }}>
                     <Container>
-                        <Typography variant="h4" sx={{ fontFamily: 'inherit', fontWeight: 800 }}>
+                        <Typography variant="h4" sx={{ fontFamily: 'inherit', fontWeight: 800, textAlign: 'center' }}>
                             Recent Transactions
                         </Typography>
                     </Container>
@@ -93,7 +93,7 @@ export default function About() {
             <br />
             <br />
             <Box component="section" sx={{ py: '3rem', borderTop: '1px solid #DDDDDD' }}>
-                <Typography variant="h4" sx={{ fontFamily: 'inherit', fontWeight: 800 }}>
+                <Typography variant="h4" sx={{ fontFamily: 'inherit', fontWeight: 800, textAlign: 'center' }}>
                     Centerstone in the news
                 </Typography>
                 <br />
@@ -104,7 +104,7 @@ export default function About() {
                 </Container>
             </Box>
             <Box component="section" sx={{ background: "#f0b3571f", py: "5rem" }} >
-                <Typography variant="h4" sx={{ fontFamily: 'inherit', fontWeight: 800 }}>
+                <Typography variant="h4" sx={{ fontFamily: 'inherit', fontWeight: 800}}>
                     Careers
                 </Typography>
                 <br />
@@ -138,10 +138,10 @@ interface NewsCardProps {
 }
 
 const ExecutiveCard = (props: ExecutiveProps) => <Box sx={{ width: { xs: '100%', sm: '70%', md: "46%", lg: "30%" }, py: '2rem', boxShadow: '0px 4px 61px #0000000d', background: '#ffffff', my: '1.5%', borderRadius: '12px' }} >
-    <Typography variant="h5" sx={{ fontWeight: 800, fontFamily: "inherit" }}>
+    <Typography variant="h5" sx={{ fontWeight: 800, fontFamily: "inherit", textAlign: 'center' }}>
         {props.name}
     </Typography>
-    <Typography variant='body2' sx={{ py: '5px', fontFamily: 'inherit', maxWidth: '60%', margin: 'auto', lineHeight: '160%' }} >
+    <Typography variant='body2' sx={{ py: '5px', fontFamily: 'inherit', maxWidth: '60%', margin: 'auto', lineHeight: '160%', textAlign: 'center' }} >
         {props.designation}
     </Typography>
 </Box>
