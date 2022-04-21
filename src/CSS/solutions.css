@@ -1,0 +1,14 @@
+.css-16j7ood-MuiButtonBase-root-MuiTab-root.Mui-selected{
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: #000000;
+}
+.css-heg063-MuiTabs-flexContainer{
+    justify-content: center;
+}
+.MuiTabs-indicatorSpan{
+    background-color: transparent;
+}   
+.css-16j7ood-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #000 !important;
+}

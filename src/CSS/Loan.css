@@ -71,7 +71,7 @@
 @media  (min-width: 350px) and (max-width: 600px) {
     .color-div{
         background-color: whitesmoke;
-        padding-top: 90px !important
+        padding-top: 50px !important
     }
     .parent-Sba{
         display: grid;

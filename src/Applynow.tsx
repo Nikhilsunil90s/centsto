@@ -14,6 +14,7 @@ import {
   CardMedia,
 } from "@mui/material";
 import "./CSS/Apply.css";
+import Footer from "./Footer";
 const Applynow = () => {
   return (
     <>
@@ -131,6 +132,7 @@ If you think you can qualify for an SBA loan and meet the above criteria, you ca
 </Button>
         </Grid>
       </Box>
+      <Footer />
     </>
   );
 };

@@ -8,11 +8,14 @@
 .Bg-color{
     background-color: #ffff !important;
     position: fixed !important;
-    z-index: 1;
+    z-index: 122;
   }
 .Bg-color img{
     width: 11%;
     margin-left: 50px;
+}
+.list-items a{
+text-decoration: unset !important;
 }
 .header-btn {
   display: flex !important;
@@ -36,7 +39,7 @@ padding-left: 6px;
     padding: 0px 30px;
     flex-grow: 1;
 }
-.list-items a{
+.list-item a{
   text-decoration: unset !important;
 }
 .list-item{
@@ -44,7 +47,7 @@ padding-left: 6px;
   justify-content: end;
   padding: 0px 30px;
   flex-grow: 1;
-  flex-direction: column;
+  flex-direction: column !important;
 }
 .btn-apply {
   background-color: #f0b357 !important;

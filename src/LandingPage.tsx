@@ -1,6 +1,7 @@
 import React from "react";
 import "./CSS//LandingPage.css";
 import Header from './Header/Header';
+import Footer from './Footer'
 import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
@@ -608,6 +609,7 @@ function LandingPage() {
             </Grid>
       </section>
     </Box>
+    <Footer />
     </>
   );
 }

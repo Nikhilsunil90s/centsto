@@ -90,19 +90,20 @@ const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
             Home
                </Button> 
                </Link> 
-               <Button
+               <Link to='/About'>      <Button
                className="header-btn"
                  onClick={handleCloseNavMenu}
                >
            About us
-               </Button>  <Button
+               </Button> </Link>
+               <Link to='/Landing'> <Button
                className="header-btn"
                  onClick={handleCloseNavMenu}
                  variant="contained"
                 
                >
             Landing Solutions <FontAwesomeIcon icon={faAngleDown} />
-               </Button> 
+               </Button> </Link>
     
          <Link to='/Apply'>   <Button className="btn-apply">
                 Apply Now
@@ -148,31 +149,34 @@ const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
                 display: { xs: 'block', md: 'none' },
               }}
             >
-                <Box className="list-item">
-              <Button
-       className="header-btn"
-                  onClick={handleCloseNavMenu}
-                >
-             Home
-                </Button>  
-                <Button
-                className="header-btn"
-                  onClick={handleCloseNavMenu}
-                >
-            About us
-                </Button>  <Button
-                className="header-btn"
-                  onClick={handleCloseNavMenu}
-                  variant="contained"
+            
+             <Box className="list-item">
+           <Link to='/'>  <Button
+               className="header-btn"
+                 onClick={handleCloseNavMenu}
+               >
+            Home
+               </Button> 
+               </Link> 
+               <Link to='/About'>      <Button
+               className="header-btn"
+                 onClick={handleCloseNavMenu}
+               >
+           About us
+               </Button> </Link>
+               <Link to='/Landing'> <Button
+               className="header-btn"
+                 onClick={handleCloseNavMenu}
+                 variant="contained"
                 
-                >
-             Landing Solutions <FontAwesomeIcon icon={faAngleDown} />
-                </Button> 
+               >
+            Landing Solutions <FontAwesomeIcon icon={faAngleDown} />
+               </Button> </Link>
     
-             <Button className="btn-apply">
-                 Apply Now
-             </Button>
-           </Box>
+         <Link to='/Apply'>   <Button className="btn-apply">
+                Apply Now
+            </Button></Link>
+          </Box>
             </Menu>
           </Box>
         </Toolbar>
