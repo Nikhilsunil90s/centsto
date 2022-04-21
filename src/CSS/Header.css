@@ -8,6 +8,7 @@
 .Bg-color{
     background-color: #ffff !important;
     position: fixed !important;
+    z-index: 1;
   }
 .Bg-color img{
     width: 11%;
@@ -22,12 +23,28 @@
   font-size: 16px !important;
   line-height: 25px !important;
   text-transform: unset !important;
+  box-shadow: unset !important;
+  background-color: unset !important;
 }
+.header-btn svg{
+padding-left: 6px;
+}
+
 .list-items{
     display: flex;
     justify-content: end;
     padding: 0px 30px;
     flex-grow: 1;
+}
+.list-items a{
+  text-decoration: unset !important;
+}
+.list-item{
+  display: flex;
+  justify-content: end;
+  padding: 0px 30px;
+  flex-grow: 1;
+  flex-direction: column;
 }
 .btn-apply {
   background-color: #f0b357 !important;
@@ -36,4 +53,45 @@
   color: black !important;
   font-weight: 600 !important;
   font-size: 16px !important;
+}
+
+/* Header color */
+
+.header-color{
+  background: white !important;
+  color: black !important;
+}
+
+
+
+
+
+
+/* Media  Query */
+
+@media  (min-width: 350px) and (max-width: 600px) {
+.Bg-color{
+  display: none !important;
+}
+  
+  }
+  @media   (min-width: 600px) and (max-width: 968px) {
+ .Bg-color{
+   display: none !important;
+ }
+
+  }
+  @media  (min-width: 900px) and  (max-width: 968px) {
+.header-color{
+  display: none !important;
+
+}
+.Bg-color{
+  display: initial !important
+}
+  }
+  @media  (min-width: 968px) and  (max-width: 1280px) {
+.header-color{
+  display: none !important;
+}
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import "./LandingPage.css";
+import "./CSS//LandingPage.css";
+import Header from './Header/Header';
 import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
@@ -57,10 +58,12 @@ const responsiveBlog = {
 };
 function LandingPage() {
   return (
+    <>
+    <Header />
     <Box className="Landing-color"> 
       <Box className="parent-div">
         <Grid container spacing={2}>
-          <Grid item xs={12} md={6} className="pd-0" >
+          <Grid   xs={12} lg={6} sm={6} className="pd-0" >
             <Card className="parent-card">
               <CardContent>
                 <Typography>
@@ -84,11 +87,11 @@ function LandingPage() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={12} md={6} className="bg-img-Right">
+          <Grid   xs={12} lg={6} sm={6} className="bg-img-Right">
             <Box className="star">
               <img src={require("./images/star.svg").default} />
             </Box>
-            <img src={require("./images/Shop.svg").default} />
+            <img className="width" src={require("./images/Shop.svg").default} />
           </Grid>
         </Grid>
       </Box>
@@ -125,45 +128,45 @@ function LandingPage() {
             <Grid item xs={12} md={12} className="flex-col">
               <Card className="card-class">
                 <Grid container>
-                  <Grid item xs={1} md={1}>
+                  <Grid item xs={3} md={1}>
                     <img
                       className="check"
                       src={require("./images/Check.svg").default}
                     />
                   </Grid>
-                  <Grid item xs={5} md={5}>
-                    <Typography>
+                  <Grid item xs={8} md={5}>
+                    <Typography >
                       Up to 90% financing for qualified applicants
                     </Typography>
                   </Grid>
-                  <Grid item xs={1} md={1}>
+                  <Grid item xs={3} md={1}>
                     <img
                       className="check"
                       src={require("./images/Check.svg").default}
                     />
                   </Grid>
-                  <Grid item xs={5} md={5}>
+                  <Grid item xs={8} md={5}>
                     <Typography>
                       Fully amortized loans, no balloon payments
                     </Typography>
                   </Grid>
 
-                  <Grid item xs={1} md={1}>
+                  <Grid item xs={3} md={1}>
                     <img
                       className="check1"
                       src={require("./images/Check.svg").default}
                     />
                   </Grid>
-                  <Grid item xs={5} md={5}>
+                  <Grid item xs={8} md={5}>
                     <Typography className="pd-pd">Longer terms</Typography>
                   </Grid>
-                  <Grid item xs={1} md={1}>
+                  <Grid item xs={3} md={1}>
                     <img
                       className="check1"
                       src={require("./images/Check.svg").default}
                     />
                   </Grid>
-                  <Grid item xs={5} md={5}>
+                  <Grid item xs={8} md={5}>
                     <Typography className="pd-pd">
                       Lower down payments
                     </Typography>
@@ -177,29 +180,29 @@ function LandingPage() {
             <Grid item xs={12} md={12} className="flex-col">
               <Card className="card-class1">
                 <Grid container className="container-flex">
-                  <Grid item xs={4} md={4} className="center">
+                  <Grid item xs={12} md={4} className="center">
                     <img
-                      className="check2"
+                      className=""
                       src={require("./images/bakery.svg").default}
                     />
-                    <Typography>Business Financing</Typography>
-                    <p>Up to 80% LTV Up to 10 years terms</p>
+                    <Typography className="financing">Business Financing</Typography>
+                    <p className="upto">Up to 80% LTV Up to 10 years terms</p>
                   </Grid>
-                  <Grid item xs={4} md={4} className="center">
+                  <Grid item xs={12} md={4} className="center">
                     <img
-                      className="check2"
+                      className=""
                       src={require("./images/lock.svg").default}
                     />
-                    <Typography>Real Estate Acquisition</Typography>
-                    <p>Up to 90% LTV Up to 25 year terms 51% owner-occupied</p>
+                    <Typography className="financing">Real Estate Acquisition</Typography>
+                    <p className="upto">Up to 90% LTV Up to 25 year terms 51% owner-occupied</p>
                   </Grid>
-                  <Grid item xs={4} md={4} className="center">
+                  <Grid item xs={12} md={4} className="center">
                     <img
-                      className="check2"
+                      className=""
                       src={require("./images/cam.svg").default}
                     />
-                    <Typography className="">Debt Refinance</Typography>
-                    <p>Business and/or Commercial Real Estate</p>
+                    <Typography className="financing">Debt Refinance</Typography>
+                    <p className="upto">Business and/or Commercial Real Estate</p>
                   </Grid>
                 </Grid>
               </Card>
@@ -218,14 +221,15 @@ function LandingPage() {
               <strong>Why Choose Centerstone?</strong>
             </Typography>
             <Grid container>
-              <Grid item xs={6} md={6} className="pd-left">
-                <img src={require("./images/girl.svg").default} />
+              <Grid item xs={12} md={6} lg={6} className="pd-left">
+                <img className="width-img" src={require("./images/girl.svg").default} />
               </Grid>
-              <Grid item xs={6} md={6}>
+              <Grid item xs={12} md={6} lg={6} >
                 <Grid container>
                   <Grid item xs={12} md={12} className="flex-col">
                     <Card className="card-class2">
                       <Grid container>
+                        <Grid xs={6} className='covering'>
                         <Grid item xs={1} md={1} className="check-left">
                           <img src={require("./images/Check.svg").default} />
                         </Grid>
@@ -234,6 +238,8 @@ function LandingPage() {
                             Solution-Based Lending
                           </Typography>
                         </Grid>
+                        </Grid>
+                        <Grid xs={6} className='covering'>
                         <Grid item xs={1} md={1} className="check-left">
                           <img src={require("./images/Check.svg").default} />
                         </Grid>
@@ -242,7 +248,8 @@ function LandingPage() {
                             Common Sense Lending
                           </Typography>
                         </Grid>
-
+</Grid>
+<Grid xs={6} className='covering'>
                         <Grid item xs={1} md={1} className="check-left">
                           <img src={require("./images/Check.svg").default} />
                         </Grid>
@@ -251,6 +258,8 @@ function LandingPage() {
                             Full Team Approach
                           </Typography>
                         </Grid>
+                        </Grid>
+                        <Grid xs={6} className='covering'>
                         <Grid item xs={1} md={1} className="check-left">
                           <img src={require("./images/Check.svg").default} />
                         </Grid>
@@ -259,6 +268,8 @@ function LandingPage() {
                             Efficient Processing
                           </Typography>
                         </Grid>
+                        </Grid>
+                        <Grid xs={6} className='covering'>
                         <Grid item xs={1} md={1} className="check-left">
                           <img src={require("./images/Check.svg").default} />
                         </Grid>
@@ -267,6 +278,8 @@ function LandingPage() {
                             High Closing Rate
                           </Typography>
                         </Grid>
+                        </Grid>
+                        <Grid xs={6} className='covering'>
                         <Grid item xs={1} md={1} className="check-left">
                           <img src={require("./images/Check.svg").default} />
                         </Grid>
@@ -275,6 +288,8 @@ function LandingPage() {
                             Direct PLP Lender
                           </Typography>
                         </Grid>
+                        </Grid>
+                        <Grid xs={6} className='covering'>
                         <Grid item xs={1} md={1} className="check-left">
                           <img src={require("./images/Check.svg").default} />
                         </Grid>
@@ -283,6 +298,8 @@ function LandingPage() {
                             Fast Turnaround
                           </Typography>
                         </Grid>
+                        </Grid>
+                        <Grid xs={6} className='covering'>
                         <Grid item xs={1} md={1} className="check-left">
                           <img src={require("./images/Check.svg").default} />
                         </Grid>
@@ -290,6 +307,7 @@ function LandingPage() {
                           <Typography className="padding-tr">
                             Nationwide Lender
                           </Typography>
+                        </Grid>
                         </Grid>
                       </Grid>
                     </Card>
@@ -590,6 +608,7 @@ function LandingPage() {
             </Grid>
       </section>
     </Box>
+    </>
   );
 }
 

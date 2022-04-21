@@ -12,9 +12,11 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 import "../CSS/Header.css"
 const Header=()=>{
-    const pages = ['Home', 'About us', 'Landing Solutions'];
+  const pages =["fsf","hh"];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -35,6 +37,7 @@ const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   };
 
   return (
+    <>
     <AppBar position="static" className="Bg-color">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -68,11 +71,7 @@ const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+            
             </Menu>
           </Box>
           <Typography
@@ -84,27 +83,102 @@ const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
             LOGO
           </Typography>
           <Box className="list-items">
-            {pages?.map((page) => 
-              //   page=="Landing Solutions" ? <Button>Landing Solutions </Button>
-              //  : 
-                (
-             <>  <Button
+           <Link to='/'>  <Button
                className="header-btn"
-                 key={page}
                  onClick={handleCloseNavMenu}
                >
-                 {page}
-               </Button>  
-               </>
-            )
-            )}
-            <Button className="btn-apply">
+            Home
+               </Button> 
+               </Link> 
+               <Button
+               className="header-btn"
+                 onClick={handleCloseNavMenu}
+               >
+           About us
+               </Button>  <Button
+               className="header-btn"
+                 onClick={handleCloseNavMenu}
+                 variant="contained"
+                
+               >
+            Landing Solutions <FontAwesomeIcon icon={faAngleDown} />
+               </Button> 
+    
+         <Link to='/Apply'>   <Button className="btn-apply">
                 Apply Now
-            </Button>
+            </Button></Link>
+          </Box>
+        
+        </Toolbar>
+      </Container>
+    </AppBar>
+    
+    
+     {/* /* responsive header */  }
+     <AppBar position="static" className="header-color">
+      <Container >
+        <Toolbar disableGutters>
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+                <Box className="list-item">
+              <Button
+       className="header-btn"
+                  onClick={handleCloseNavMenu}
+                >
+             Home
+                </Button>  
+                <Button
+                className="header-btn"
+                  onClick={handleCloseNavMenu}
+                >
+            About us
+                </Button>  <Button
+                className="header-btn"
+                  onClick={handleCloseNavMenu}
+                  variant="contained"
+                
+                >
+             Landing Solutions <FontAwesomeIcon icon={faAngleDown} />
+                </Button> 
+    
+             <Button className="btn-apply">
+                 Apply Now
+             </Button>
+           </Box>
+            </Menu>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
+  </>
 )
 }
 export default Header;
