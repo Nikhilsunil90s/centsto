@@ -109,7 +109,7 @@ export default function About() {
                     Careers
                 </Typography>
                 <br />
-                <Typography variant='body2' sx={{ py: '5px', px: '5px', fontFamily: 'inherit', maxWidth: '600px', margin: 'auto' }} >
+                <Typography variant='body2' sx={{ py: '5px', px: '5px', fontSize: '16px', fontFamily: 'inherit', maxWidth: '600px', margin: 'auto', lineHeight: '26px' }} >
                     Centerstone is always looking to add experienced and driven professionals to expand
                     and grow with our company. We are continually searching for experienced professionals
                     within the industry by offering a thriving work environment, a passionate and exciting

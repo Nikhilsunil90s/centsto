@@ -1,7 +1,11 @@
-.css-16j7ood-MuiButtonBase-root-MuiTab-root.Mui-selected{
-    background-color: #ffffff;
-    border-radius: 25px;
-    color: #000000;
+/* .css-15m1002-MuiButtonBase-root-MuiTab-root.Mui-selected{
+    color: #555555 !important;
+    border-radius: 25px !important;
+} */
+
+.css-15m1002-MuiButtonBase-root-MuiTab-root.Mui-selected{
+    border-radius: 25px !important;
+    color: #555555 !important;
 }
 .css-heg063-MuiTabs-flexContainer{
     justify-content: center;
@@ -10,9 +14,10 @@
     background-color: transparent;
 }
 
-@media (max-width: 576px) {
+
+@media  (min-width: 350px) and (max-width: 600px) {
     .tabs-bar{
-        max-width: 90%;
-        overflow-x: scroll;
+        max-width: 100% !important;
+        overflow-x: scroll !important;
     }
-}
+}    
