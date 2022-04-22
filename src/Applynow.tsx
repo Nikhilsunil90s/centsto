@@ -1,10 +1,10 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Header from './Header/Header';
 import { Grid, List, ListItem, ListItemText } from "@mui/material";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
-import Carousel from "react-multi-carousel";
+import { Link } from "react-router-dom";
 import "react-multi-carousel/lib/styles.css";
 import {
   Button,
@@ -16,6 +16,9 @@ import {
 import "./CSS/Apply.css";
 import Footer from "./Footer";
 const Applynow = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <Header />
@@ -128,7 +131,11 @@ const Applynow = () => {
 If you think you can qualify for an SBA loan and meet the above criteria, you can apply today by:
 </Typography>
 <Button >
+<Link to='/Apply' >
+
     Apply now
+</Link>
+
 </Button>
         </Grid>
       </Box>

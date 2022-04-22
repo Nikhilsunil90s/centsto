@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Box, Typography, Tabs, Tab, List, ListItem, ListItemIcon, ListItemText, Container, Button } from '@mui/material';
 import close from "./images/close_cross.svg";
 import clipboard from "./images/clipboard-tick.svg";
@@ -8,28 +8,34 @@ import edit from "./images/edit.svg";
 import money2 from "./images/money-2.svg";
 import "./CSS/solutions.css";
 import Header from './Header/Header';
-
+import Footer from './Footer';
 
 export default function Solutions() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     const [value, setValue] = useState(0);
     const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     }
+    
     return (
         <>
         <Header />
-        <Box component="main" sx={{textAlign:"center",paddingTop:"80px"}}>
-            <Box component="section" sx={{ py: '3rem' }}>
-                <Typography variant='h4' sx={{ fontWeight: 800, fontFamily: 'inherit' }}>
+        <Box component="main" sx={{ textAlign: 'center', maxWidth: '100vw', overflowX: 'hidden'}}>
+            <Container component="section" sx={{ py: '7rem' }}>
+                <Typography variant='h4' sx={{ fontWeight: 800, fontFamily: 'inherit'}}>
                     Lending Solutions
                 </Typography>
-            </Box>
+            </Container>
             <Box sx={{ width: {xs : '100%', sm: '90%', md: '70%', lg: '60%', xl: '45%'}, margin: 'auto'}}>
                 <Box sx={{ background: '#F2E7D7', borderRadius: '25px', py: '4px' }}>
-                    <Tabs value={value} variant="scrollable"  onChange={handleTabChange} aria-label="basic tabs example" >
-                        <Tab label="Business Financing" sx={{textTransform: 'none', color: '#555555', width: {xs: 'fit-content', md: '33%'}}} {...a11yProps(0)} />
-                        <Tab label="Real State Financing" sx={{textTransform: 'none', color: '#555555', width: {xs: 'fit-content', md: '33%'}}} {...a11yProps(1)} />
-                        <Tab label="Debt Financing" sx={{textTransform: 'none', color: '#555555', width: {xs: 'fit-content', md: '33%'}}} {...a11yProps(2)} />
+                    <Tabs className="tabs-bar" value={value} variant="scrollable" scrollButtons="auto" onChange={handleTabChange} aria-label="basic tabs example" sx={{ width: '100%' }} TabIndicatorProps={tabIndicatorProps}>
+                        <Tab label="Business Financing" sx={{textTransform: 'none', color: '#555555', width: {xs: 'fit-content', md: '33%'}, zIndex: 2}} {...a11yProps(0)} />
+                        <Tab label="Real State Financing" sx={{textTransform: 'none', color: '#555555', width: {xs: 'fit-content', md: '33%'}, zIndex: 2}} {...a11yProps(1)} />
+                        <Tab label="Debt Financing" sx={{textTransform: 'none', color: '#555555', width: {xs: 'fit-content', md: '33%'}, zIndex: 2}} {...a11yProps(2)} />
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
@@ -57,7 +63,7 @@ export default function Solutions() {
                 </Container>
             </Box>
             <Box component="section" sx={{ background: "#f0b3571f", py: "5rem" }} >
-                <Typography variant='body2' sx={{ py: '5px', px: '5px', fontFamily: 'inherit', maxWidth: '600px', margin: 'auto', fontWeight: 600, lineHeight: '160%' }} >
+                <Typography variant='body2' sx={{ py: '5px', px: '5px', fontFamily: 'inherit', fontSize: '20px', maxWidth: '600px', margin: 'auto', fontWeight: 600, lineHeight: '160%' }} >
                     If you think you can qualify for an SBA loan and meet the above criteria, you can apply today by:
                 </Typography>
                 <br />
@@ -69,8 +75,24 @@ export default function Solutions() {
                 </Button>
             </Box>
         </Box>
+        <Footer />
         </>
+
     )
+}
+
+
+
+// utilities -------------------------------------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------------
+
+const tabIndicatorProps = {
+    style: {
+        background: '#ffffff', 
+        height: '50px', 
+        zIndex : 1, 
+        borderRadius: '25px'
+    }
 }
 
 interface TabPanelProps {

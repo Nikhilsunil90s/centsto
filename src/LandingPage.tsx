@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./CSS//LandingPage.css";
 import Header from './Header/Header';
 import Footer from './Footer'
@@ -10,14 +10,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Button, CardActionArea, CardActions,CardContent,CardMedia } from '@mui/material';
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-  </Box>
-  
-);
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -58,6 +51,9 @@ const responsiveBlog = {
   }
 };
 function LandingPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <Header />

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./CSS/Loan.css";
 import Header from './Header/Header';
 import { Grid } from "@mui/material";
@@ -15,6 +15,9 @@ import {
   CardMedia,
 } from "@mui/material";
 const SBALoan = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Box className="color-div">
       <Grid container spacing={2}>

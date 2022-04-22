@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react'
-import { Typography, Box, Button, Container, IconProps } from '@mui/material';
+import React from 'react'
+import { Typography, Box, Button, Container } from '@mui/material';
 import logo from "./images/centerstone_logo.svg";
 import facebook_logo from "./images/facebook_logo.svg";
 import instagram_logo from "./images/instagram_logo.svg";
-import { Facebook, Instagram, Call, Mail } from '@mui/icons-material';
-import '../src/CSS/footer.css'
-
-
+import { Call, Mail } from '@mui/icons-material';
+import "./CSS/footer.css";
+import {Link} from 'react-router-dom';
 export default function Footer() {
     return (
-        <Box component='footer' sx={{ py: '3rem', background: '#0E0E0E'}}>
+        <Box component='footer' sx={{ py: '3rem', background: '#0E0E0E', textAlign: 'center'}}>
             <Container sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
                 <Box sx={{ width: { xs: '100%', md: '60%', lg: '50%', py: '1rem', margin: 'auto' } }}>
                     <Box sx={{width: {xs: '100%', md: '100%', lg: '210px'}}}>
@@ -45,12 +44,14 @@ export default function Footer() {
                 </Box>
                 <Box sx={{ width: { xs: '100%', md: '60%', lg: '50%', py: '1rem', margin: 'auto' } }}>
                     <Box sx={{width: { xs: 'fit-content', md: 'fit-content', lg: '100%'}, margin: 'auto', display: 'flex', justifyContent: 'right'}}>
+                       <Link to='/Contact'>
                         <Button variant='contained'
                             sx={{ textTransform: 'none', color: '#000000', fontWeight: 'bold', background: '#f0b357' }}
                             style={{background: '#f0b357'}}
                             size='large'
                         >Contact Us
                         </Button>
+                        </Link>
                     </Box>
                     <Box sx={{ width: { xs: 'fit-content', md: 'fit-content', lg: '100%' }, margin: 'auto', display: 'flex', justifyContent: 'right' }}>
                         <Box sx={{ py: '1rem', display: 'flex', columnGap: '2rem', rowGap: '0.5rem', flexWrap: 'wrap', justifyContent: 'space-around' }}>

@@ -102,6 +102,10 @@ padding-top: 50px;
     font-size: 16px !important;
     line-height: 22px !important;
 }
+.color-footer a{
+    color: black !important;
+    text-decoration: none !important;
+}
 
 /* Media Query */
 
